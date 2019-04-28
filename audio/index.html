@@ -291,184 +291,109 @@ jQuery(function ($) {
         // initialize playlist and controls
         var index = 0,
             playing = false,
-            mediaPath = 'https://archive.org/download/mythium/',
+            mediaPath = 'http://jakwyapps.com/audio/',
             extension = '',
             tracks = [{
                 "track": 1,
-                "name": "All This Is - Joe L.'s Studio",
+                "name": "Аламан менен Жоламан",
                 "duration": "2:46",
-                "file": "JLS_ATI"
+                "file": "Alaman-menen-jolaman"
             }, {
                 "track": 2,
-                "name": "The Forsaken - Broadwing Studio (Final Mix)",
+                "name": "Алтын Куш",
                 "duration": "8:30",
-                "file": "BS_TF"
+                "file": "Altyn-kush"
             }, {
                 "track": 3,
-                "name": "All The King's Men - Broadwing Studio (Final Mix)",
+                "name": "Апенди жана акмак Вазир",
                 "duration": "5:01",
-                "file": "BS_ATKM"
+                "file": "Apendi-jana-akmak-vazir"
             }, {
                 "track": 4,
-                "name": "The Forsaken - Broadwing Studio (First Mix)",
+                "name": "Апенди Ханды кантип алдады?",
                 "duration": "8:31",
-                "file": "BSFM_TF"
+                "file": "Apendi-xandy-kantip-aldady"
             }, {
                 "track": 5,
-                "name": "All The King's Men - Broadwing Studio (First Mix)",
+                "name": "Ак-куу",
                 "duration": "5:05",
-                "file": "BSFM_ATKM"
+                "file": "ak-kuu"
             }, {
                 "track": 6,
-                "name": "All This Is - Alternate Cuts",
+                "name": "Байлык,Бакыт жана Акыл",
                 "duration": "2:48",
-                "file": "AC_ATI"
+                "file": "baylik-bakyt-jana-akyl"
             }, {
                 "track": 7,
-                "name": "All The King's Men (Take 1) - Alternate Cuts",
+                "name": "Бөөрү - Ит жана Ителги",
                 "duration": "5:44",
-                "file": "AC_ATKMTake_1"
+                "file": "booru-it-itelgi"
             }, {
                 "track": 8,
-                "name": "All The King's Men (Take 2) - Alternate Cuts",
+                "name": "Дөөтү уста менен Ителги",
                 "duration": "5:26",
-                "file": "AC_ATKMTake_2"
+                "file": "dootu-usta-menen-itelgi"
             }, {
                 "track": 9,
-                "name": "Magus - Alternate Cuts",
+                "name": "Илегилек менен Карга",
                 "duration": "5:46",
-                "file": "AC_M"
+                "file": "ilegilek-menen-karga"
             }, {
                 "track": 10,
-                "name": "The State Of Wearing Address (fucked up) - Alternate Cuts",
+                "name": "Жаманжык эмнеден келип чыгат",
                 "duration": "5:25",
-                "file": "AC_TSOWAfucked_up"
+                "file": "jamandyk-emneden-kelip-chygat"
             }, {
                 "track": 11,
-                "name": "Magus - Popeye's (New Years '04 - '05)",
+                "name": "Жыл талашуу",
                 "duration": "5:53",
-                "file": "PNY04-05_M"
+                "file": "jyl-talashuu"
             }, {
                 "track": 12,
-                "name": "On The Waterfront - Popeye's (New Years '04 - '05)",
+                "name": "Карышкур Үлүл жана Аарылар",
                 "duration": "4:40",
-                "file": "PNY04-05_OTW"
+                "file": "karyshky-ulul-jana-aarylar"
             }, {
                 "track": 13,
-                "name": "Trance - Popeye's (New Years '04 - '05)",
+                "name": "Кайберендин көз жашы",
                 "duration": "13:15",
-                "file": "PNY04-05_T"
+                "file": "kayberendin-koz-jashy"
             }, {
                 "track": 14,
-                "name": "The Forsaken - Popeye's (New Years '04 - '05)",
+                "name": "Көгүчкөндөрдүн кенещи",
                 "duration": "8:12",
-                "file": "PNY04-05_TF"
+                "file": "koguchkondordun-keneshi"
             }, {
                 "track": 15,
-                "name": "The State Of Wearing Address - Popeye's (New Years '04 - '05)",
+                "name": "Кулдун баласы жана Зымырак куш",
                 "duration": "7:02",
-                "file": "PNY04-05_TSOWA"
+                "file": "kuldun-balasy-jana-zymyrak-kush"
             }, {
                 "track": 16,
-                "name": "Magus - Popeye's (Valentine's Day '05)",
+                "name": "Кумурска менен Жалкоо",
                 "duration": "5:43",
-                "file": "PVD_M"
+                "file": "kumurska-menen-jalkoo"
             }, {
                 "track": 17,
-                "name": "Trance - Popeye's (Valentine's Day '05)",
+                "name": "Оной табылган нан",
                 "duration": "10:45",
-                "file": "PVD_T"
+                "file": "onoy-tabylgan-nan"
             }, {
                 "track": 18,
-                "name": "The State Of Wearing Address - Popeye's (Valentine's Day '05)",
+                "name": "Сыйкыр сөз",
                 "duration": "5:36",
-                "file": "PVD_TSOWA"
+                "file": "siykir-soz"
             }, {
                 "track": 19,
-                "name": "All This Is - Smith St. Basement (01/08/04)",
+                "name": "Сыйкырдуу роза",
                 "duration": "2:48",
-                "file": "SSB01_08_04_ATI"
+                "file": "siykyrduu-roza"
             }, {
                 "track": 20,
-                "name": "Magus - Smith St. Basement (01/08/04)",
+                "name": "Таз бала",
                 "duration": "5:46",
-                "file": "SSB01_08_04_M"
-            }, {
-                "track": 21,
-                "name": "Beneath The Painted Eye - Smith St. Basement (06/06/03)",
-                "duration": "13:07",
-                "file": "SSB06_06_03_BTPE"
-            }, {
-                "track": 22,
-                "name": "Innocence - Smith St. Basement (06/06/03)",
-                "duration": "5:16",
-                "file": "SSB06_06_03_I"
-            }, {
-                "track": 23,
-                "name": "Magus - Smith St. Basement (06/06/03)",
-                "duration": "5:46",
-                "file": "SSB06_06_03_M"
-            }, {
-                "track": 24,
-                "name": "Madness Explored - Smith St. Basement (06/06/03)",
-                "duration": "4:51",
-                "file": "SSB06_06_03_ME"
-            }, {
-                "track": 25,
-                "name": "The Forsaken - Smith St. Basement (06/06/03)",
-                "duration": "8:43",
-                "file": "SSB06_06_03_TF"
-            }, {
-                "track": 26,
-                "name": "All This Is - Smith St. Basement (12/28/03)",
-                "duration": "3:00",
-                "file": "SSB12_28_03_ATI"
-            }, {
-                "track": 27,
-                "name": "Magus - Smith St. Basement (12/28/03)",
-                "duration": "6:09",
-                "file": "SSB12_28_03_M"
-            }, {
-                "track": 28,
-                "name": "Madness Explored - Smith St. Basement (12/28/03)",
-                "duration": "5:05",
-                "file": "SSB12_28_03_ME"
-            }, {
-                "track": 29,
-                "name": "Trance - Smith St. Basement (12/28/03)",
-                "duration": "12:32",
-                "file": "SSB12_28_03_T"
-            }, {
-                "track": 30,
-                "name": "The Forsaken - Smith St. Basement (12/28/03)",
-                "duration": "8:56",
-                "file": "SSB12_28_03_TF"
-            }, {
-                "track": 31,
-                "name": "All This Is (Take 1) - Smith St. Basement (Nov. '03)",
-                "duration": "4:55",
-                "file": "SSB___11_03_ATITake_1"
-            }, {
-                "track": 32,
-                "name": "All This Is (Take 2) - Smith St. Basement (Nov. '03)",
-                "duration": "5:45",
-                "file": "SSB___11_03_ATITake_2"
-            }, {
-                "track": 33,
-                "name": "Beneath The Painted Eye (Take 1) - Smith St. Basement (Nov. '03)",
-                "duration": "14:05",
-                "file": "SSB___11_03_BTPETake_1"
-            }, {
-                "track": 34,
-                "name": "Beneath The Painted Eye (Take 2) - Smith St. Basement (Nov. '03)",
-                "duration": "13:25",
-                "file": "SSB___11_03_BTPETake_2"
-            }, {
-                "track": 35,
-                "name": "The Forsaken (Take 1) - Smith St. Basement (Nov. '03)",
-                "duration": "8:37",
-                "file": "SSB___11_03_TFTake_1"
-            }, {
+                "file": "taz-bala"
+            },  {
                 "track": 36,
                 "name": "The Forsaken (Take 2) - Smith St. Basement (Nov. '03)",
                 "duration": "8:36",
