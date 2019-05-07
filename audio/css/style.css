@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 4.5em;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#audio-player {
+  position: relative;
+  left: -1000em;
+  top: -1000em;
+}
+
+#bg {
+  transition: 1s ease;
+}
+.bg-last {
+  background: url(http://www.clipartbest.com/cliparts/aTq/eya/aTqeyaETM.png);
+  background-size: cover;
+}
+
+.bg-red, .bg-red2 {
+  background: red;
+}
+
+.bg-green {
+  background: green;
+}
+
+.bg-yellow {
+  background: yellow;
+}
+
+.bg-blue {
+  background: blue;
+}
