@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Audio Player</title>
+  <title>Кыргызча аудио китептер</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -342,11 +342,7 @@ jQuery(function ($) {
                 "name": "Таз бала",
                 "duration": "5:46",
                 "file": "taz-bala"
-            },  {
-                "track": 36,
-                "name": "The Forsaken (Take 2) - Smith St. Basement (Nov. '03)",
-                "duration": "8:36",
-                "file": "SSB___11_03_TFTake_2"
+           
             }],
             buildPlaylist = $(tracks).each(function(key, value) {
                 var trackNumber = value.track,
@@ -368,12 +364,12 @@ jQuery(function ($) {
             npTitle = $('#npTitle'),
             audio = $('#audio1').on('play', function () {
                 playing = true;
-                npAction.text('Now Playing...');
+                npAction.text('Азыр ойноп жатат...');
             }).on('pause', function () {
                 playing = false;
-                npAction.text('Paused...');
+                npAction.text('Токтотулду...');
             }).on('ended', function () {
-                npAction.text('Paused...');
+                npAction.text('Токтотулду...');
                 if ((index + 1) < trackCount) {
                     index++;
                     loadTrack(index);
