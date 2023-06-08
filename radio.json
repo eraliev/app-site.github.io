@@ -1,15 +1,15 @@
 [
   {
     "id": "bc639a68-6fde-4297-9154-483e68a1005d",
-    "url": "https://22343.live.streamtheworld.com/100PNL_MP3_SC",
-    "name": "1002% NLRE",
-    "image": "https://digitenne.kpn.com/uploads/img/zenders/radio-zenders-icons-png/1001radio100nl.png"
+    "url": "https://radio.tumar.fm:8005/stream",
+    "name": "Тумар Радиосу",
+    "image": "http://backendapps.omabboy.beget.tech/radiokg/uploads/radios/radio_20568_tumarfm2.png"
   },
   {
     "id": "3faa5398-10ed-4a88-a612-32381c05f615",
-    "url": "https://stream.100p.nl/web01_mp3",
-    "name": "100% NL FeSSSest",
-    "image": "https://luisteren.nl/app/uploads/2018/12/100_nl_feest_fm.png"
+    "url": "https://cdn.radioplayer.kg:8443/obondoru64",
+    "name": "Кыргызстан Обондору",
+    "image": "http://backendapps.omabboy.beget.tech/radiokg/uploads/radios/radio_54592_kyrgyzstan-obondoru.png"
   },
   {
     "id": "a8dae3e5-32ce-4398-ab6c-f4589be75aeb",
